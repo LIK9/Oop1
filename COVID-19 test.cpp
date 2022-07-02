@@ -10,7 +10,7 @@ int main()
 	for(int i = 0; i < 3; ++i)
 	{	
 		string name = "noname"; // 이름 변수입니다. 처음엔 default 값으로 noname을 넣어줍니다.
-		int birth = 220101; // 생년월일 변수입니다. 처음엔 default 값으로 220101을 넣어줍니다.
+		string birth = "220101"; // 생년월일 변수입니다. 처음엔 default 값으로 220101을 넣어줍니다.
 		double temperature = 36.5; // 체온 변수입니다. 처음엔 default 값으로 36.5를 넣어줍니다.
 		bool symptom = false; // 증상 변수입니다. 처음엔 default 값으로 false를 넣어줍니다.
 		string test = "음성"; // 검사지 변수입니다. 처음엔 default 값으로 음성을 넣어줍니다.
