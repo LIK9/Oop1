@@ -26,13 +26,13 @@ int main()
 	cout << setw(10) << left << name3 << setw(10) << right << plus3 << setw(10) << right << minus3 << endl;
 	cout << endl;
 
-	cout << "잔액 = " << plus1 + minus1 << " (" << name1 << ")" << endl; // 첫 번째 잔액을 계산합니다.
-	cout << "잔액 = " << plus2 + minus2 << " (" << name2 << ")" << endl; // 두 번째 잔액을 계산합니다.
+	cout << "잔액 = " << static_cast<int>(plus1) + minus1 << " (" << name1 << ")" << endl; // 첫 번째 잔액을 계산합니다.
+	cout << "잔액 = " << static_cast<int>(plus2) + minus2 << " (" << name2 << ")" << endl; // 두 번째 잔액을 계산합니다.
 	cout << "잔액 = " << static_cast<int>(plus3) + minus3 << " (" << name3 << ")" << endl; // 세 번째 잔액을 계산할 때 암묵적 자료형 변환에 의해 unsigned로 변환되어서 언더플로우가 일어납니다.
 	cout << endl;																		   // 따라서, 명시적 자료형 변환을 이용해 이를 방지합니다.
 
 	cout << fixed << setprecision(3); // 평균을 소수점 아래 3자리까지 출력하기 위해 부동 소수점 조정자를 사용합니다.
-	cout << "평균 잔액 = " << (static_cast<int>(plus1) + minus1 + plus2 + minus2 + static_cast<int>(plus3) + minus3) / 3.0 << endl; // double type으로 명시적 형변환을 하였습니다
+	cout << "평균 잔액 = " << static_cast<int>(plus1 + minus1 + plus2 + minus2 + plus3 + minus3) / 3.0 << endl; // double type으로 명시적 형변환을 하였습니다
 
 	return 0;
 }
